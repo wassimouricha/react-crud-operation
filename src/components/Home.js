@@ -1,7 +1,11 @@
 import React from 'react';
+import { Heading } from './Heading';
+import { UserList } from './UserList';
 
 export const Home = () => {
   return <div>
-      <h1>Accueil</h1>
+      
+      <Heading />
+      <UserList />
   </div>;
 };
