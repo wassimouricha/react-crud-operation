@@ -9,17 +9,16 @@ import {
 } from 'reactstrap';
 
 export const UserList = () => {
-    const {users} = useContext(GlobalContext);
+    const {users, removeUser} = useContext(GlobalContext);
   return (
       <ListGroup className='mt-4'>
           {users.map(user => (
                  <ListGroupItem className='d-flex'> 
                  <strong> {user.name}</strong>
              <div className='ms-auto'>
-                 <Link className="btn btn-warning mr-1" to="/edit/1"> Editer </Link>
-                 <Button color='danger'>Supprimer</Button>
+                 <Link className="btn btn-warning mr-1" to={`/edit/${user.id}`}> Editer </Link>
+                 <Button onClick={() => removeUser(user.id)} color='danger'>Supprimer</Button>
              </div>  
-             
              </ListGroupItem>
           ))}
          
