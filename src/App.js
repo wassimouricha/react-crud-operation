@@ -12,9 +12,10 @@ function App() {
       <Router>
         <h1> Nav </h1>
         <Switch>
-            <Home />
-            <AddUser />
-            <EditUser />
+        < Route  exact path="/" component={Home}  />
+            < Route path="/add" component={AddUser}  />
+            < Route path="/edit/:id" component={EditUser}  />
+            
         </Switch>
       </Router>
      
