@@ -17,7 +17,7 @@ export const EditUser = () => {
         <Input type='text' placeholder='Entrez voter nom'></Input>
     </FormGroup>
     <Button type='Submit' >Editer le Nom</Button>
-    <Link to="/" className="btn btn-danger ms-auto">Annuler</Link>
+    <Link to="/" className="btn btn-danger  ms-auto">Annuler</Link>
 </Form>
   );
 };
