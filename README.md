@@ -16,4 +16,4 @@ You may also see any lint errors in the console.
 
 ### `npm test`
 
-This App is made with  react 17.0.2 ,Bootstrap 5.1.3,reactstrap 9.0.1,uuid 8.3.2,react-router-dom 5.2.0 , Hooks and context API
+This React CRUD App is made with  react 17.0.2 ,Bootstrap 5.1.3,reactstrap 9.0.1,uuid 8.3.2,react-router-dom 5.2.0 , Hooks and context API
