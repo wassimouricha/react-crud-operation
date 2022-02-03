@@ -1,5 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, {useContext} from 'react';
+import { GlobalContext } from '../context/GlobalState';
+import { Link,useHistory } from 'react-router-dom';
 import {  
     Form,
     FormGroup,
@@ -9,8 +10,18 @@ import {
 } from "reactstrap";
 
 export const AddUser = () => {
+    const {addUser} = useContext(GlobalContext);
+    const history = useHistory();
+    const onSubmit = () =>{
+        const newUser = {
+            id: 4,
+            name: 'utilisateur quatre'
+        }
+        addUser(newUser);
+        history.push('/');
+    }
   return (
-      <Form>
+      <Form onSubmit={onSubmit}>
           <FormGroup>
               <Label>Nom</Label>
               <Input type='text' placeholder='Entrez voter nom'></Input>
