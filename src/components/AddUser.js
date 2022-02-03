@@ -1,6 +1,7 @@
 import React, {useState, useContext} from 'react';
 import { GlobalContext } from '../context/GlobalState';
 import { Link,useHistory } from 'react-router-dom';
+import {v4 as uuid} from 'uuid';
 import {  
     Form,
     FormGroup,
@@ -15,7 +16,7 @@ export const AddUser = () => {
     const history = useHistory();
     const onSubmit = () =>{
         const newUser = {
-            id: 4,
+            id: uuid(),
             name
         }
         addUser(newUser);

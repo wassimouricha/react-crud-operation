@@ -3,11 +3,7 @@ import AppReducer from './AppReducer';
 
 //Initialisation de l'état
 const initialState = {
-    users: [
-        {id:1, name:'Utilisateur un'},
-        {id:2, name:'Utilisateur deux'},
-        {id:3, name:'Utilisateur trois'}
-    ]
+    users: []
 
 };
 
@@ -35,10 +31,17 @@ export const GLobalProdvider = ({children})=>{
             })
         }
 
+        const editUser = (user) => {
+            dispatch({
+                type: 'EDIT_USER',
+                payload: user
+            })
+        }
+
     return(
         <GlobalContext.Provider value={{
             users: state.users,
-            removeUser,addUser
+            removeUser,addUser,editUser
         }}>
 
         {children}
